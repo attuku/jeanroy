@@ -1,0 +1,138 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700|Sansita+One);
+:root {
+  --primary-color: #302AE6;
+  --font-color: #424242;
+  --bg-color: #fff;
+  --h1-color: #000;
+  --title-content: #c35953;
+  --alexandre: #c35953;
+  --projects-title: #c35953;
+  --link: #0a3073;
+}
+
+[data-theme=dark] {
+  --primary-color: #9A97F3;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --h1-color: #ffdb9d;
+  --title-content: #efaa33;
+  --alexandre: #ffdb9d;
+  --projects-title: #ffdb9d;
+  --link: #ffdb9d;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  max-width: 90%;
+  margin: 0 auto;
+  font-size: calc(1rem + 0.25vh);
+}
+
+h1 {
+  color: var(--heading-color);
+  font-family: "Sansita One", serif;
+  font-size: 2rem;
+  margin-bottom: 1vh;
+}
+
+a {
+    color: var(--link);
+}
+
+section {
+  max-width: 68%;
+  margin: 0 auto;
+}
+
+.title-content {
+    color:var(--title-content);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.projects-title {
+    color:var(--projects-title);
+}
+
+h1 {
+    color: var(--h1-color);
+}
+
+.alexandre {
+    color: var(--alexandre);
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 0;
+}
+
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+.theme-switch-wrapper em {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media (max-width: 640px) {
+    section {
+        max-width: 100%;
+        text-align: start;
+        margin-bottom:30px;
+    }
+}
